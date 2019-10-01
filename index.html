@@ -2,10 +2,11 @@
 <html class="no-js" lang="en">
 <head>
 
+
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>StarNails Arteixo - Salón de uñas</title>
+    <title>StarNails Arteixo: uñas de Gel, uñas de Porcelana, uñas Esculpidas, francesa, uñas Acrilicas, manicura, pedicuras...</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -28,6 +29,40 @@
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name ="description" content="Uñas de Gel, Uñas de Porcelana, Uñas Esculpidas, Francesa, Uñas Acrilicas, Manicura, Pedicura, Oferta de trabajo" >
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149158030-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149158030-1');
+    </script>
+    
+    <script>
+            /* ésto comprueba la localStorage si ya tiene la variable guardada */
+            function compruebaAceptaCookies() {
+              if(localStorage.aceptaCookies == 'true'){
+                cajacookies.style.display = 'none';
+              }
+            }
+            
+            /* aquí guardamos la variable de que se ha
+            aceptado el uso de cookies así no mostraremos
+            el mensaje de nuevo */
+            function aceptarCookies() {
+              localStorage.aceptaCookies = 'true';
+              cajacookies.style.display = 'none';
+            }
+            
+            /* ésto se ejecuta cuando la web está cargada */
+            $(document).ready(function () {
+              compruebaAceptaCookies();
+            });
+            </script>
+    
 
 </head>
 
@@ -35,208 +70,192 @@
 
     <!-- home
     ================================================== -->
-    <main class="s-home s-home--static">
+    <main class="s-home s-home--slides">
+
+        <div class="home-slider">
+            <div class="home-slider-img" style="background-image: url(images/slides/slide-01.jpg);"></div>
+            <div class="home-slider-img" style="background-image: url(images/slides/slide-02.jpg);"></div>
+            <div class="home-slider-img" style="background-image: url(images/slides/slide-03.jpg);"></div>
+            <div class="home-slider-img" style="background-image: url(images/slides/slide-04.jpg);"></div>
+        </div>
 
         <div class="overlay"></div>
 
         <div class="home-content">
 
             <div class="home-logo">
-                <a href="index-static.html">
+                <a href="index.html">
                     <img src="images/logo-star-nails.png" alt="Star Nails Arteixo - Uñas de Gel y Acrílico">
                 </a>
             </div>
 
             <div class="row home-content__main">
 
-                <div class="col-eight home-content__text pull-right">
-                    <h3>Bienvenido a Star Nails Arteixo</h3>
-
-                    <h1>
-                    Tu salón de uñas  <br>
-                    en Arteixo.
-                    </h1>
-
-                    <p style="color:aliceblue"> 
-                        Este es tu centro especializado en manicura, pedicura, semipermanente, 
-                        uñas de gel, acrílico, acrigel, depilaciones, masajes, pestañas y maquillaje profesional.
-                    </p>
-
-                    <span style="color: #ec008c;">Teléfono para citas:</span><h1>622 578 334</h1>
-
-                    <div class="home-content__subscribe">
-                        <form id="mc-form" class="group" novalidate="true">
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email" required="">
-                            <input type="submit" name="subscribe" value="Suscribirse">
-                            <label for="mc-email" class="subscribe-message"></label>
-                        </form>
-                    </div>
-                </div>  <!-- end home-content__text -->
-
-                <div class="col-four home-content__counter">
-                    <h3>Servicios</h3>
-
-                    <div class="home-content__clock_">
-                        <div class="top">
-                            <div class="time-days" style="color: #ec008c;">
-                                  <span>Manicuras</span><br>
-                                  <span>Pedicuras</span><br>
-                                  <span>Semipermanentes</span><br>
-                                  <span>Depilaciones</span><br>
-                                  <span>Uñas de Gel/Acrigel</span><br>
-                                  <span>Pestañas</span><br>
-                                  <span>Maquillaje profesional</span><br>
-                            </div>
-                        </div>    
+                    <div class="col-eight home-content__text pull-right">
+                        <h3>Bienvenido a Star Nails Arteixo</h3>
+    
+                        <h1>
+                        Tu salón de uñas  <br>
+                        en Arteixo.
+                        </h1>
+    
+                        <p style="color:aliceblue"> 
+                            Este es tu centro especializado en manicura, pedicura, semipermanente, 
+                            uñas de gel, acrílico, acrigel, depilaciones, masajes, pestañas y maquillaje profesional.
+                            Estamos en la peatonal de Arteixo (Avda Balneario 30).
+                        </p>
+                        <p style="color:aliceblue">  
+                            Oferta especial este mes en <strong>extensión de pestañas volumen ruso</strong> por 64,95 € y <strong> limpieza de cutis</strong> por 24,95 €.
+                        </p>
+    
+                        <span style="color: #ec008c;">Teléfono para citas:</span><h1>622 578 334</h1>
+                       
                         <!-- 
-                        <div class="time hours">
-                            09
-                            <span>H</span>
-                        </div>
-                        <div class="time minutes">
-                            54
-                            <span>M</span>
-                        </div>
-                        <div class="time seconds">
-                            30
-                            <span>S</span>
+                        <div class="home-content__subscribe">
+                            <form id="mc-form" class="group" novalidate="true">
+                                <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email" required="">
+                                <input type="submit" name="subscribe" value="Suscribirse">
+                                <label for="mc-email" class="subscribe-message"></label>
+                            </form>
                         </div>
                         -->
-                    </div>  <!-- end home-content__clock -->
-                </div>  <!-- end home-content__counter -->
-
-            </div>  <!-- end home-content__main -->
-
-            <ul class="home-social">
-                <li>
-                <a href="https://www.facebook.com/sn.arteixo"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
-                </li>
-                <li>
-                <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-                </li>
-                <li>
-                <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-                </li>
-                <li>
-                <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a>
-                </li>
-                <li>
-                <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
-                </li>
-            </ul> <!-- end home-social -->
-
-            <div class="row home-copyright">
-                <span>Copyright StarNails Arteixo 2019</span> 
-                <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
-            </div> <!-- end home-copyright -->
-
-            <div class="home-content__line"></div>
-
-        </div> <!-- end home-content -->
-
-    </main> <!-- end s-home -->
-
-    <!-- info
-    ================================================== -->
-    <a class="info-toggle" href="#0">
-        <span class="info-menu-icon"></span>
-    </a>
-
-    <div class="s-info">
-
-        <div class="row info-wrapper">
-
-            <div class="col-seven tab-full info-main">
-                <h1>StarNails Arteixo, la excelencia en uñas.</h1>
-                <p>
-                Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, 
-                eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 
-                Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                </p>
-
-                <p>
-                Officiis nostrum adipisci minima. Enim tenetur animi ipsum a itaque temporibus necessitatibus. 
-                Dolores ad perspiciatis. Voluptatem et molestiae adipisci laboriosam assumenda. Deleniti vero 
-                labore eos repudiandae. Vel commodi tenetur ex quia. Quisque velit nisi, pretium ut lacinia in, 
-                elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.
-                </p>
-            </div>
-
-            <div class="col-four tab-full pull-right info-contact">
-
-                <div class="info-block">
-                    <h3>Start A Conversation</h3>
+                        <div id="cajacookies">
+                                <p><a  onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Aceptar y cerrar éste mensaje</a>
+                                Éste sitio web usa cookies, si permanece aquí acepta su uso.
+                             
+                                </p>
+                        </div> 
+                    </div>  <!-- end home-content__text -->
+    
+                    <div class="col-four home-content__counter">
+                        <h3>Servicios</h3>
+    
+                        <div class="home-content__clock_">
+                            <div class="top">
+                                <div class="time-days" style="color: #ec008c;">
+                                      <span>Manicuras</span><br>
+                                      <span>Pedicuras</span><br>
+                                      <span>Semipermanentes</span><br>
+                                      <span>Depilaciones</span><br>
+                                      <span>Uñas de Gel/Acrigel</span><br>
+                                      <span>Pestañas</span><br>
+                                      <span>Maquillaje profesional</span><br>
+                                </div>
+                            </div>    
+                            <!-- 
+                            <div class="time hours">
+                                09
+                                <span>H</span>
+                            </div>
+                            <div class="time minutes">
+                                54
+                                <span>M</span>
+                            </div>
+                            <div class="time seconds">
+                                30
+                                <span>S</span>
+                            </div>
+                            -->
+                        </div>  <!-- end home-content__clock -->
+                    </div>  <!-- end home-content__counter -->
+    
+                </div>  <!-- end home-content__main -->
+    
+                <ul class="home-social">
+                    <li>
+                    <a href="https://www.facebook.com/sn.arteixo"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
+                    </li>
+                    <li>
+                    <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                    </li>
+                    <li>
+                    <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                    </li>
+                    <li>
+                    <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+                    </li>
+                    <li>
+                    <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+                    </li>
+                </ul> <!-- end home-social -->
+    
+                <div class="row home-copyright">
+                    <span>Copyright StarNails Arteixo 2019</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
+                </div> <!-- end home-copyright -->
+    
+                <div class="home-content__line"></div>
+    
+            </div> <!-- end home-content -->
+    
+        </main> <!-- end s-home -->
+    
+        <!-- info
+        ================================================== -->
+        <a class="info-toggle" href="#0">
+            <span class="info-menu-icon"></span>
+        </a>
+    
+        <div class="s-info">
+    
+            <div class="row info-wrapper">
+    
+                <div class="col-seven tab-full info-main">
+                    <h1>StarNails Arteixo, la excelencia en uñas.</h1>
                     <p>
-                        <a href="mailto:#0" class="info-email">starnailsarteixo@gmail.com</a><br>
-                        <a href="tel:622 578 334" class="'info-phone">622 578 334</a>
+                        Encuentranos en pleno centro de Arteixo en la calle peatonal. Atendemos con o sin cita.
                     </p>
-                </div>
-
-                <div class="info-block">
-                    <h3>Visita nuestro salón</h3>
                     
-                    <p class="info-address">
-                        Avda Peatonal<br>
-                        Arteixo<br>
-                        15142 - A Coruña
-                    </p>
+                     <!--Google Maps-->
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.4722171696862!2d-8.509703684341817!3d43.30437327913485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2e886b21ced735%3A0x99ee2e239c893bf6!2sStar%20Nails%20Arteixo!5e0!3m2!1ses!2ses!4v1569886237509!5m2!1ses!2ses" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
-
-                <div class="info-block">
-                    <h3>Find Us On</h3>
+               <!--Google map-->
+                </div>
+    
+               
+                    <div class="info-block">
+                        <h3>Estamos en</h3>
+                        
+                        <ul class="info-social">
+                            <li>
+                                <a href="https://www.facebook.com/sn.arteixo"><i class="fab fa-facebook" aria-hidden="true"></i>
+                                <span>Facebook</span></a>
+                            </li>
+                             
+                        </ul>
+                    </div>
                     
-                    <ul class="info-social">
-                        <li>
-                            <a href="https://www.facebook.com/sn.arteixo"><i class="fab fa-facebook" aria-hidden="true"></i>
-                            <span>Facebook</span></a>
-                        </li>
-                        <li>
-                            <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i>
-                            <span>Twiiter</span></a>
-                        </li>
-                        <li>
-                            <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i>
-                            <span>Instagram</span></a>
-                        </li>
-                        <li>
-                            <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i>
-                            <span>Behance</span></a>
-                        </li>
-                        <li>
-                            <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i>
-                            <span>Dribbble</span></a>
-                        </li>
-                    </ul>
+                </div>  <!-- end info contact -->
+    
+            </div>  <!-- end info wrapper -->
+    
+          
+        </div> <!-- end s-info -->
+    
+       
+    
+        <!-- preloader
+        ================================================== -->
+        <div id="preloader">
+            <div id="loader">
+                <div class="line-scale-pulse-out">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                
-            </div>  <!-- end info contact -->
-
-        </div>  <!-- end info wrapper -->
-
-    </div> <!-- end s-info -->
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-            <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
             </div>
         </div>
-    </div>
+    
+        <!-- Java Script
+        ================================================== -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-</body>
-
-</html>
+        
+    </body>
+    
+    </html>
